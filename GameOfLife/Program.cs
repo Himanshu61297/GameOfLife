@@ -3,8 +3,9 @@ using System.Collections.Generic;
 
 namespace GameOfLife
 {
+    //This class contains all the fuctions related to the game logic
     public static class Helpers
-    {
+    { 
         //Empty Game Board
         public static int[][] genrateEmptyBoard(int m, int n)
         {
@@ -28,13 +29,11 @@ namespace GameOfLife
         {
             if (seedPositions == null)
             {
-                var random = new Random();
-                var rowLen = board.Length;
-                var colLen = board[0].Length;
+                var random = new Random();                
 
-                for (int i = 0; i< 6; i++)
+                for (int i = 0; i< (board.Length*2); i++)
                 {
-                    board[random.Next(rowLen)][random.Next(colLen)] = 1;
+                    board[random.Next(board.Length)][random.Next(board.Length)] = 1;
                 }                
             }
             else
@@ -123,9 +122,25 @@ namespace GameOfLife
             {
                 for (int j = 0; j < board[0].Length; j++)
                 {
-                    Console.Write(board[i][j] + "\t");
+                    Console.Write(board[i][j] + " ");
                 }
                 Console.WriteLine();
+            }            
+        }
+
+        //For Displaying positons
+        public static void displayAliveCellPositions(int[][] board)
+        {
+            Console.WriteLine("Positions..");
+            for (int i = 0; i < board.Length; i++)
+            {
+                for (int j = 0; j < board[0].Length; j++)
+                {
+                    if(board[i][j] == 1)
+                    {
+                        Console.WriteLine(i + "," + j);
+                    }
+                }               
             }
         }
     }
@@ -154,6 +169,7 @@ namespace GameOfLife
                         board = Helpers.nextGenration(board);
                         Console.WriteLine("Next Genration");
                         Helpers.displayBoard(board);
+                        Helpers.displayAliveCellPositions(board);
                         Console.WriteLine("Press 1 for next genration! Any other key for exit.");
                     } while (Console.ReadLine() == "1");                    
                     break;
@@ -190,6 +206,7 @@ namespace GameOfLife
                             board = Helpers.nextGenration(board);
                             Console.WriteLine("Next Genration");
                             Helpers.displayBoard(board);
+                            Helpers.displayAliveCellPositions(board);
                             Console.WriteLine("Press 1 for next genration! Any other key for exit.");
                         } while (Console.ReadLine() == "1");
                     }
