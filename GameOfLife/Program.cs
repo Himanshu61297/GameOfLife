@@ -27,7 +27,7 @@ namespace GameOfLife
                     break;
                 }
 
-                Console.WriteLine("Press Any key to continue OR Press 0 to exit");
+                Console.WriteLine("Press Any key to continue OR Press 0 to exit the program");
             } while (Console.ReadLine() != "0");            
             
         }

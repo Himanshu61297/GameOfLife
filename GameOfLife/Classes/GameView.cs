@@ -171,7 +171,7 @@ namespace GameOfLife
                             game.displayAliveCellPositions(board);
 
                             Console.WriteLine("Move on to next generation?");
-                            Console.WriteLine("Press any key to continue OR Press 0 to exit");
+                            Console.WriteLine("Press any key to continue OR Press 0 to exit the game");
 
                         } while (Console.ReadLine() != "0");                        
                     }
