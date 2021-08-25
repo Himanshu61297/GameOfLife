@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace GameOfLife
 {
     class Program
     {  
+        //Main Function
         static void Main(string[] args)
         {
-            var gameView = new GameView(); //initializing gameView class object
+            var gameView = new GameView(); //initializing gameView class object           
 
             do
             {
@@ -20,7 +20,7 @@ namespace GameOfLife
                 }
                 else if (input == "2")
                 {
-                    gameView.playV2(); //customized input and output
+                    gameView.playV2(); //customized input and output                    
                 }
                 else
                 {
@@ -28,8 +28,8 @@ namespace GameOfLife
                 }
 
                 Console.WriteLine("Press Any key to continue OR Press 0 to exit the program");
-            } while (Console.ReadLine() != "0");            
-            
+            } while (Console.ReadLine() != "0");
+
         }
     }
 }

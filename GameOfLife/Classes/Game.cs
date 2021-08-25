@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace GameOfLife
 {
@@ -55,9 +54,8 @@ namespace GameOfLife
         //Every cell interacts with its eight neighbours, which are the cells that are directly horizontally, vertically,
         //or diagonally adjacent.
         public int countNeighbours(int[][] board, Tuple<int, int> pos)
-        {
-            //For calculation of 8 neighbours
-            var checksList = new List<(int, int)>();
+        {            
+            var checksList = new List<(int, int)>(); //For calculation of 8 neighbours
             checksList.Add((-1, -1));
             checksList.Add((-1, 0));
             checksList.Add((-1, 1));
@@ -132,7 +130,7 @@ namespace GameOfLife
             }
         }
 
-        //For Displaying positons
+        //For Displaying coordinates
         public void displayAliveCellPositions(int[][] board)
         {
             for (int i = 0; i < board.Length; i++)
