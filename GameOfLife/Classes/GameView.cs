@@ -25,7 +25,7 @@ namespace GameOfLife
             string xy = ""; //Seed Coorinate
             int row = 0; //universe grid row
             int column = 0; //universe grid column
-            bool isCanceled = false; //if the proccess is cancled by invalid input
+            bool isCanceled = false; //if the proccess is canceled by invalid input
 
             Console.WriteLine("Input seeds like x,y. Enter EMPTY input to STOP.");            
             while(true)
