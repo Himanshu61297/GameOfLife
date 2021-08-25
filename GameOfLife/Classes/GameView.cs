@@ -13,7 +13,7 @@ namespace GameOfLife
         //Global Game object
         private Game game;        
         
-        //Constructor
+        //Default Constructor
         public GameView()
         {          
             //initialize game object

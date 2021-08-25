@@ -7,6 +7,7 @@ namespace GameOfLife
     //This Game class inherits from IGame interface and will implement all of it's members.
     class Game : IGame
     {
+        //Default Constructor
         public Game() { }
         
         //Empty Game Board
