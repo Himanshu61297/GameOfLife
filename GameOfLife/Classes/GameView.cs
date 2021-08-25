@@ -22,7 +22,7 @@ namespace GameOfLife
         public void play() 
         {
             var seedPosList = new List<string>(); //For storing the input coordinates.
-            string xy = ""; //Seed Coorinate
+            string xy = ""; //Seed Coordinate
             int row = 0; //universe grid row
             int column = 0; //universe grid column
             bool isCanceled = false; //if the proccess is canceled by invalid input
