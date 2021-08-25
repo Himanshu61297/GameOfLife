@@ -16,38 +16,7 @@ namespace GameOfLife
         public GameView()
         {
             game = new Game(); //initializing the game object     
-        }
-
-        //Regex For checking the input coordinates
-        public bool checkCoordinates(string str)
-        {          
-            string pattern;
-            pattern = @"^\d\,\d";      // Define the regular expression pattern for <X,Y> where X and Y are digits.
-
-            Regex rgx = new Regex(pattern);
-
-            if (rgx.IsMatch(str))
-            {
-                return true;
-            }
-
-            return false;
-        }
-
-        //String to Int conversion with exception handling
-        private int toInt(string str) 
-        {
-            try
-            {
-                return Convert.ToInt32(str);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-            return -1;
-        }
+        }        
 
         //Main Game Function
         public void play() 
@@ -109,7 +78,38 @@ namespace GameOfLife
             {
                 Console.WriteLine();
             }           
-        }        
+        }
+
+        //Regex For checking the input coordinates
+        private bool checkCoordinates(string str)
+        {
+            string pattern;
+            pattern = @"^\d\,\d";      // Define the regular expression pattern for <X,Y> where X and Y are digits.
+
+            Regex rgx = new Regex(pattern);
+
+            if (rgx.IsMatch(str))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        //String to Int conversion with exception handling
+        private int toInt(string str)
+        {
+            try
+            {
+                return Convert.ToInt32(str);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return -1;
+        }
 
         //Alternate fun play method
         public void playV2()
