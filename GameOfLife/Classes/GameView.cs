@@ -22,7 +22,6 @@ namespace GameOfLife
         public void play() 
         {
             var seedPosList = new List<string>(); //For storing the input coordinates.
-            string xy = ""; //Seed Coordinate
             int row = 0; //universe grid row
             int column = 0; //universe grid column
             bool isCanceled = false; //if the proccess is canceled by invalid input
@@ -30,9 +29,9 @@ namespace GameOfLife
             Console.WriteLine("Input seeds like x,y. Enter EMPTY input to STOP.");            
             while(true)
             {
-                xy = Console.ReadLine();
+                string xy = Console.ReadLine();
 
-                if(xy == "")
+                if (xy == "")
                 {
                     break; //break if empty input
                 }               
